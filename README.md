@@ -1,5 +1,5 @@
-# random-integer-number
-Example component for OXID eShop 6.2 Services
+# random-number
+Example component service for OXID eShop 6.2
 
 ### Install as package
 `composer require michaelkeiluweit/random-number`
@@ -13,13 +13,28 @@ use MichaelKeiluweit\RandomNumber\RandomNumberInterface;
 
 require_once 'bootstrap.php';
 
-/** @var RandomIntegerNumberInterface $randomIntegerNumber */
+/** @var RandomNumberInterface $randomNumber */
 $randomNumber = ContainerFactory::getInstance()->getContainer()->get(RandomNumberInterface::class);
 
 $number = $randomNumber->shuffle();
-echo 'random_number: ' . $number;
 echo PHP_EOL;
-echo 'type: ' . gettype($number);
-echo PHP_EOL;
-
+echo 'random number: ' . $number . PHP_EOL;
+echo 'number type: ' . gettype($number) . PHP_EOL;
+echo 'object type: ' . get_class($randomNumber) . PHP_EOL . PHP_EOL;
 ```
+
+### Switch from integer to float
+
+To get a random float number, open the file `random-number/src/services.yaml` and replace the line
+```yaml
+class: MichaelKeiluweit\RandomNumber\RandomIntegerNumber
+```
+with
+```yaml
+class: MichaelKeiluweit\RandomNumber\RandomFloatNumber
+```
+
+After that, execute the command `composer update`.
+Now the service will provide a random float number.
+
+
