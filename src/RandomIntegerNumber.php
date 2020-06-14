@@ -1,12 +1,12 @@
 <?php
 
 
-namespace MichaelKeiluweit\RandomIntegerNumber;
+namespace MichaelKeiluweit\RandomNumber;
 
 
-class RandomIntegerNumber implements RandomIntegerNumberInterface
+class RandomIntegerNumber implements RandomNumberInterface
 {
-    public function shuffle(): int
+    public function shuffle()
     {
         return rand(0, PHP_INT_MAX);
     }

@@ -1,5 +1,5 @@
 {
-  "name": "michaelkeiluweit/random-integer-number",
+  "name": "michaelkeiluweit/random-number",
   "type": "oxideshop-component",
   "require": {
     "php": ">=7.4",
@@ -7,7 +7,7 @@
   },
   "autoload": {
     "psr-4": {
-      "MichaelKeiluweit\\RandomIntegerNumber\\": "src/"
+      "MichaelKeiluweit\\RandomNumber\\": "src/"
     }
   },
   "extra": {

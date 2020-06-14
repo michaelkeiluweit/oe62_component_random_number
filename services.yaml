@@ -1,5 +1,5 @@
 services:
-  MichaelKeiluweit\RandomIntegerNumber\RandomIntegerNumberInterface:
-    class: MichaelKeiluweit\RandomIntegerNumber\RandomIntegerNumber
+  MichaelKeiluweit\RandomNumber\RandomNumberInterface:
+    class: MichaelKeiluweit\RandomNumber\RandomIntegerNumber
     autowire: true
     public: true

@@ -2,21 +2,24 @@
 Example component for OXID eShop 6.2 Services
 
 ### Install as package
-`composer require michaelkeiluweit/random-integer-number`
+`composer require michaelkeiluweit/random-number`
 
 ### Example usage
 ```php
 <?php
 
 use OxidEsales\EshopCommunity\Internal\Container\ContainerFactory;
-use MichaelKeiluweit\RandomIntegerNumber\RandomIntegerNumberInterface;
+use MichaelKeiluweit\RandomNumber\RandomNumberInterface;
 
 require_once 'bootstrap.php';
 
 /** @var RandomIntegerNumberInterface $randomIntegerNumber */
-$randomIntegerNumber = ContainerFactory::getInstance()->getContainer()->get(RandomIntegerNumberInterface::class);
+$randomNumber = ContainerFactory::getInstance()->getContainer()->get(RandomNumberInterface::class);
 
-echo 'random_number: ' . $randomIntegerNumber->shuffle();
+$number = $randomNumber->shuffle();
+echo 'random_number: ' . $number;
+echo PHP_EOL;
+echo 'type: ' . gettype($number);
 echo PHP_EOL;
 
 ```
