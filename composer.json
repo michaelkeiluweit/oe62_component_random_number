@@ -1,0 +1,18 @@
+{
+  "name": "michaelkeiluweit/random-integer-number",
+  "type": "oxideshop-component",
+  "require": {
+    "php": ">=7.4",
+    "oxid-esales/oxideshop-metapackage-ce": "^v6.2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MichaelKeiluweit\\RandomIntegerNumber\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.x-dev"
+    }
+  }
+}
